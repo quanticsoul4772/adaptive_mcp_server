@@ -1,0 +1,48 @@
+# Core Python Requirements
+python-dotenv>=0.21.0
+asyncio>=3.4.3
+
+# Research and Search Integration
+aiohttp>=3.8.1
+exa-py>=0.1.0  # Hypothetical Exa Search API client
+
+# Natural Language Processing
+nltk>=3.7
+transformers>=4.25.1
+torch>=1.13.0
+
+# Machine Learning and AI
+scikit-learn>=1.2.0
+numpy>=1.23.5
+scipy>=1.10.0
+
+# Reasoning and Validation
+spacy>=3.5.0
+textblob>=0.17.1
+
+# Logging and Monitoring
+structlog>=22.1.0
+
+# Testing
+pytest>=7.2.1
+pytest-asyncio>=0.20.3
+pytest-cov>=4.0.0
+
+# Development and Debugging
+ipython>=8.8.0
+black>=22.12.0
+flake8>=6.0.0
+mypy>=0.991
+
+# API and Web (if needed)
+fastapi>=0.89.1
+uvicorn>=0.20.0
+
+# Optional: Additional NLP Resources
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+
+# Error and Performance Monitoring
+sentry-sdk>=1.14.0
+
+# Typing Support
+typing-extensions>=4.4.0
