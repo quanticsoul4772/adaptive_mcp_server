@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive_mcp_server"
+version = "0.1.0"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+description = "Adaptive MCP Server with multiple reasoning strategies"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "python-dotenv>=0.21.0",
+    "asyncio>=3.4.3",
+    "aiohttp>=3.8.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.2.1",
+    "pytest-asyncio>=0.20.3",
+    "pytest-cov>=4.0.0",
+]
+dev = [
+    "black>=22.12.0",
+    "flake8>=6.0.0",
+    "mypy>=0.991",
+    "ipython>=8.8.0",
+]
+nlp = [
+    "nltk>=3.7",
+    "transformers>=4.25.1",
+    "torch>=1.13.0",
+    "scikit-learn>=1.2.0",
+    "numpy>=1.23.5",
+    "scipy>=1.10.0",
+    "spacy>=3.5.0",
+    "textblob>=0.17.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+asyncio_mode = "strict"
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  adaptive-mcp-server:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - EXA_API_KEY=${EXA_API_KEY}
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
